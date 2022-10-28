@@ -5,6 +5,7 @@ const {
 createApp({
     data(){
         return {
+            addedTask: [''],
             tasks:[
                 {
                     text: 'Fare la spesa',
@@ -30,7 +31,11 @@ createApp({
         deleteTask(i) {
             // console.log(i);
             this.tasks.splice(i, 1)
+        },
+        addTask(){
+            console.log(this.addedTask);
+            this.tasks.unshift(this.addedTask);
+            this.addedTask = ['']
         }
     }
 }).mount('#app')
-
