@@ -12,7 +12,9 @@
 <body>
     <div id="app">
         <h1 class="text-center">To Do List</h1>
-        
+        <ul>
+            <li v-for="task in tasks">{{task.name}}</li>
+        </ul>
     </div>
 
 
