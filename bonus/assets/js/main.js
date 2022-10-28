@@ -6,7 +6,7 @@ const {
 createApp({
     data(){
         return {
-            addedTask: '',
+            addedTask: {text: '', done: false},
             tasks:[
                 {
                     text: 'Fare la spesa',

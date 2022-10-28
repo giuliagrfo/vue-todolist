@@ -5,7 +5,7 @@ const {
 createApp({
     data(){
         return {
-            addedTask: '',
+            addedTask: {text: '', done: false},
             tasks:[
                 {
                     text: 'Fare la spesa',
@@ -36,7 +36,6 @@ createApp({
             console.log(this.addedTask);
             this.tasks.unshift(this.addedTask);
             this.addedTask = {text: '', done: false}
-
         }
     }
 }).mount('#app')
