@@ -24,6 +24,13 @@ createApp({
                 },
             ]
         }
+        
+    }, 
+    methods: {
+        deleteTask(i) {
+            // console.log(i);
+            this.tasks.splice(i, 1)
+        }
     }
 }).mount('#app')
 
