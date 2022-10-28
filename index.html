@@ -14,7 +14,7 @@
         <h1 class="text-center mt-5">To Do List</h1>
         <div class="list d-flex justify-content-center my-5">
             <ul>
-                <li v-for="task in tasks">{{task.text}}</li>
+                <li v-for="task in tasks" :class="{'disabled' : task.done}">{{task.text}}</li>
             </ul>
         </div>
 
