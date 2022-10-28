@@ -34,12 +34,13 @@ createApp({
             this.tasks.splice(i, 1)
         },
         addTask(){
-            console.log(this.addedTask);
             this.tasks.unshift(this.addedTask);
-            this.addedTask = {text:''}
+            console.log(this.addedTask);
+            this.addedTask = {text: '', done: false}
         },
         disable(){
            console.log('sto cliccando sul testo');
+
         }
     }
 }).mount('#app')

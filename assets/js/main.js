@@ -35,7 +35,8 @@ createApp({
         addTask(){
             console.log(this.addedTask);
             this.tasks.unshift(this.addedTask);
-            this.addedTask = ''
+            this.addedTask = {text: '', done: false}
+
         }
     }
 }).mount('#app')
