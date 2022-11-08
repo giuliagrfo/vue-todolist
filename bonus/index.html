@@ -15,17 +15,19 @@
 </head>
 <body>
     <div id="app">
-        <h1 class="text-center mt-5">To Do List</h1>
+        <h1 class="text-center text-uppercase mt-5">To Do List</h1>
         <div class="newTasks d-flex justify-content-center mt-5">
-            <input type="text" v-model="addedTask.text" @keyup.enter="addTask">
+            <input type="email" class="form-control w-25" v-model="addedTask.text" @keyup.enter="addTask">
             
-            <button @click="addTask">Add Task</button>
+            <button type="button" class="btn btn-light mx-2" @click="addTask">Add Task</button>
         </div>
         <div class="list d-flex justify-content-center my-5">
             <ul>
-                <li v-for="(task, i) in tasks" :class="{'disabled' : task.done}" @click="disable">
+                <li class="rounded-pill my-2" v-for="(task, i) in tasks" :class="{'disabled' : task.done}" @click="disable(i)">
                     {{task.text}}
-                    <i class="fa fa-times-circle" aria-hidden="true" @click="deleteTask(i)"></i>
+                    <div class="remove">
+                        <i class="fa fa-times-circle" aria-hidden="true" @click="deleteTask(i)"></i>
+                    </div>
                 </li>
             </ul>
         </div>

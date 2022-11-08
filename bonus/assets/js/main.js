@@ -38,9 +38,18 @@ createApp({
             console.log(this.addedTask);
             this.addedTask = {text: '', done: false}
         },
-        disable(){
-           console.log('sto cliccando sul testo');
+        disable(i){
+            if(this.tasks[i].done === true){
+                // console.log('sto cliccando sul testo');
+                this.tasks[i].done = false
+            } else {
+                this.tasks[i].done = true
+
+            }
 
         }
+
     }
 }).mount('#app')
+
+
